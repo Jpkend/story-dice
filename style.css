@@ -1,0 +1,93 @@
+/* Basic styling */
+body {
+  margin: 0;
+  padding: 1em;
+  font-family: sans-serif;
+  background: #f0f0f0;
+}
+
+h1 {
+  text-align: center;
+  margin: 0.75em 0;
+}
+
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+#diceType,
+#diceCount {
+  width: 80px;
+  font-size: 1em;
+  padding: 0.2em;
+}
+
+#rollBtn {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-size: 1em;
+  border: 2px solid #555;
+  background: #fff;
+  border-radius: 4px;
+}
+
+#diceRows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em; /* vertical gap between row clusters */
+  margin: 2em 0;
+}
+
+.dice-row {
+  display: flex;
+  gap: 1.5em; /* horizontal gap between dice in a row */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Dice about 20% larger than 4em => 4.8em */
+.die {
+  width: 5em;
+  height: 5em;
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  border-radius: 0.2em; /* Adjust this value for more or less rounding */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  position: relative;
+
+  font-size: 2em;
+  font-weight: bold;
+  transition: transform 0.1s ease;
+  /* Subtle box shadow and other styling as before */
+}
+
+
+/* Simple pop scale */
+.die.animate {
+  transform: scale(1.1);
+}
+
+#total {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: 1em;
+  color: #333;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
